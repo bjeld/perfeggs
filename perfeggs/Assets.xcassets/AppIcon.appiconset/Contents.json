@@ -31,19 +31,19 @@
       "size" : "40x40"
     },
     {
-      "filename" : "120x120.png",
+      "filename" : "default@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
-      "filename" : "180x180.png",
+      "filename" : "default@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
     },
     {
-      "filename" : "1024x1024.png",
+      "filename" : "default.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
@@ -52,8 +52,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "pre-rendered" : true
   }
 }

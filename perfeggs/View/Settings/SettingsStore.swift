@@ -41,6 +41,12 @@ class SettingsStore: ObservableObject {
         }
     }
     
+    private func changeIcon(to iconName:String?) {
+        UIApplication.shared.setAlternateIconName(iconName) { (error) in
+                       print(error.debugDescription)
+                   }
+    }
+    
     var eggBoilMode: EggBoilMode {
         get {
             return defaults.string(forKey: Keys.eggBoilMode)
@@ -49,6 +55,25 @@ class SettingsStore: ObservableObject {
         
         set {
             defaults.set(newValue.rawValue, forKey: Keys.eggBoilMode)
+            
+            
+            
+            switch newValue {
+            case .skipToVerySoftBoiled:
+                changeIcon(to: "VerySoft")
+            case .skipToSoftBoiled:
+                changeIcon(to: "Soft")
+            case .skipToMediumBoiled:
+                changeIcon(to: "Medium")
+            case .skipToHardBoiled:
+                changeIcon(to: "Hard")
+            
+            default:
+                changeIcon(to: nil)
+            }
+            
+            
+           
         }
     }
     

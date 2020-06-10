@@ -22,6 +22,16 @@
 		3A7DC2A324444CAD0057874B /* SquareDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7DC2A224444CAD0057874B /* SquareDot.swift */; };
 		3A7FC283244CE89F000DA903 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7FC282244CE89F000DA903 /* ArcView.swift */; };
 		3A805023245019E2001471F4 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A805022245019E2001471F4 /* Audio.swift */; };
+		3A99052724916DC8007DE9CC /* Hard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A99051D24916DC8007DE9CC /* Hard@2x.png */; };
+		3A99052824916DC8007DE9CC /* Medium@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A99051E24916DC8007DE9CC /* Medium@2x.png */; };
+		3A99052924916DC8007DE9CC /* Soft@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A99051F24916DC8007DE9CC /* Soft@3x.png */; };
+		3A99052A24916DC8007DE9CC /* Hard@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A99052024916DC8007DE9CC /* Hard@3x.png */; };
+		3A99052B24916DC8007DE9CC /* Soft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A99052124916DC8007DE9CC /* Soft@2x.png */; };
+		3A99052C24916DC8007DE9CC /* default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A99052224916DC8007DE9CC /* default@3x.png */; };
+		3A99052D24916DC8007DE9CC /* Medium@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A99052324916DC8007DE9CC /* Medium@3x.png */; };
+		3A99052E24916DC8007DE9CC /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A99052424916DC8007DE9CC /* default@2x.png */; };
+		3A99052F24916DC8007DE9CC /* VerySoft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A99052524916DC8007DE9CC /* VerySoft@2x.png */; };
+		3A99053024916DC8007DE9CC /* VerySoft@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A99052624916DC8007DE9CC /* VerySoft@3x.png */; };
 		3A9C06EE24276FA800E7849F /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C06ED24276FA800E7849F /* CircleView.swift */; };
 		3A9C06F024289A1A00E7849F /* alert01.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3A9C06EF24289A1A00E7849F /* alert01.m4a */; };
 		3A9C06F224289A3600E7849F /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C06F124289A3600E7849F /* PlaySound.swift */; };
@@ -79,6 +89,16 @@
 		3A7DC2A224444CAD0057874B /* SquareDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareDot.swift; sourceTree = "<group>"; };
 		3A7FC282244CE89F000DA903 /* ArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
 		3A805022245019E2001471F4 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		3A99051D24916DC8007DE9CC /* Hard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hard@2x.png"; sourceTree = "<group>"; };
+		3A99051E24916DC8007DE9CC /* Medium@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Medium@2x.png"; sourceTree = "<group>"; };
+		3A99051F24916DC8007DE9CC /* Soft@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Soft@3x.png"; sourceTree = "<group>"; };
+		3A99052024916DC8007DE9CC /* Hard@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hard@3x.png"; sourceTree = "<group>"; };
+		3A99052124916DC8007DE9CC /* Soft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Soft@2x.png"; sourceTree = "<group>"; };
+		3A99052224916DC8007DE9CC /* default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@3x.png"; sourceTree = "<group>"; };
+		3A99052324916DC8007DE9CC /* Medium@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Medium@3x.png"; sourceTree = "<group>"; };
+		3A99052424916DC8007DE9CC /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = "<group>"; };
+		3A99052524916DC8007DE9CC /* VerySoft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VerySoft@2x.png"; sourceTree = "<group>"; };
+		3A99052624916DC8007DE9CC /* VerySoft@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VerySoft@3x.png"; sourceTree = "<group>"; };
 		3A9C06ED24276FA800E7849F /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		3A9C06EF24289A1A00E7849F /* alert01.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = alert01.m4a; sourceTree = "<group>"; };
 		3A9C06F124289A3600E7849F /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
@@ -162,6 +182,7 @@
 		3A5A3E832420180100190CFE /* perfeggs */ = {
 			isa = PBXGroup;
 			children = (
+				3A9904EC24916170007DE9CC /* AlternateAppIcons */,
 				3A5A3E842420180100190CFE /* AppDelegate.swift */,
 				3A5A3E862420180100190CFE /* SceneDelegate.swift */,
 				3ADF49C3242404C0002C94BC /* View */,
@@ -191,6 +212,23 @@
 				3A5A3E9D2420180500190CFE /* Info.plist */,
 			);
 			path = perfeggsTests;
+			sourceTree = "<group>";
+		};
+		3A9904EC24916170007DE9CC /* AlternateAppIcons */ = {
+			isa = PBXGroup;
+			children = (
+				3A99052424916DC8007DE9CC /* default@2x.png */,
+				3A99052224916DC8007DE9CC /* default@3x.png */,
+				3A99051D24916DC8007DE9CC /* Hard@2x.png */,
+				3A99052024916DC8007DE9CC /* Hard@3x.png */,
+				3A99051E24916DC8007DE9CC /* Medium@2x.png */,
+				3A99052324916DC8007DE9CC /* Medium@3x.png */,
+				3A99052124916DC8007DE9CC /* Soft@2x.png */,
+				3A99051F24916DC8007DE9CC /* Soft@3x.png */,
+				3A99052524916DC8007DE9CC /* VerySoft@2x.png */,
+				3A99052624916DC8007DE9CC /* VerySoft@3x.png */,
+			);
+			path = AlternateAppIcons;
 			sourceTree = "<group>";
 		};
 		3ABAA32F2426D37400125EB9 /* Sounds */ = {
@@ -352,15 +390,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ABC821F244F26BB00A1050C /* Fanfare.mp3 in Resources */,
+				3A99053024916DC8007DE9CC /* VerySoft@3x.png in Resources */,
+				3A99052B24916DC8007DE9CC /* Soft@2x.png in Resources */,
 				3A3F8FBA244DD5F700304489 /* Music.mp3 in Resources */,
+				3A99052C24916DC8007DE9CC /* default@3x.png in Resources */,
 				3ABC822A244F9FDE00A1050C /* Kill_Enemy_6.mp3 in Resources */,
+				3A99052924916DC8007DE9CC /* Soft@3x.png in Resources */,
+				3A99052824916DC8007DE9CC /* Medium@2x.png in Resources */,
 				3ABC822C244F9FDE00A1050C /* Kill_Enemy_5.mp3 in Resources */,
 				3ABC822B244F9FDE00A1050C /* Kill_Enemy_7.mp3 in Resources */,
+				3A99052F24916DC8007DE9CC /* VerySoft@2x.png in Resources */,
+				3A99052D24916DC8007DE9CC /* Medium@3x.png in Resources */,
 				3A9C06F024289A1A00E7849F /* alert01.m4a in Resources */,
+				3A99052A24916DC8007DE9CC /* Hard@3x.png in Resources */,
+				3A99052E24916DC8007DE9CC /* default@2x.png in Resources */,
 				3ABC8226244F9FC900A1050C /* Kill_Enemy_4.mp3 in Resources */,
 				3ABC8221244F37CF00A1050C /* Red_Sun_Music_Loop.wav in Resources */,
 				3A5A3E912420180500190CFE /* LaunchScreen.storyboard in Resources */,
 				3A3F8FB8244DB13D00304489 /* UI_Confirm.mp3 in Resources */,
+				3A99052724916DC8007DE9CC /* Hard@2x.png in Resources */,
 				3A5A3E8E2420180500190CFE /* Preview Assets.xcassets in Resources */,
 				3A5A3E8B2420180500190CFE /* Assets.xcassets in Resources */,
 			);
