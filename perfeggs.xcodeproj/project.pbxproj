@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3A1280A124902F2500D55B82 /* SettingsTriggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1280A024902F2500D55B82 /* SettingsTriggerView.swift */; };
 		3A1CE6D22424115D0050A396 /* RunningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1CE6D12424115D0050A396 /* RunningView.swift */; };
+		3A2675022493772200D197AC /* RunningIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2675012493772200D197AC /* RunningIndicatorView.swift */; };
+		3A2675042493787600D197AC /* TicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2675032493787600D197AC /* TicksView.swift */; };
 		3A2DAFE524516FDB00F28608 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DAFE424516FDB00F28608 /* SettingsView.swift */; };
 		3A3F8FB8244DB13D00304489 /* UI_Confirm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3A3F8FB7244DB13D00304489 /* UI_Confirm.mp3 */; };
 		3A3F8FBA244DD5F700304489 /* Music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3A3F8FB9244DD5F700304489 /* Music.mp3 */; };
@@ -32,7 +34,7 @@
 		3A99052E24916DC8007DE9CC /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A99052424916DC8007DE9CC /* default@2x.png */; };
 		3A99052F24916DC8007DE9CC /* VerySoft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A99052524916DC8007DE9CC /* VerySoft@2x.png */; };
 		3A99053024916DC8007DE9CC /* VerySoft@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A99052624916DC8007DE9CC /* VerySoft@3x.png */; };
-		3A9C06EE24276FA800E7849F /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C06ED24276FA800E7849F /* CircleView.swift */; };
+		3A9C06EE24276FA800E7849F /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C06ED24276FA800E7849F /* ProgressCircleView.swift */; };
 		3A9C06F024289A1A00E7849F /* alert01.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3A9C06EF24289A1A00E7849F /* alert01.m4a */; };
 		3A9C06F224289A3600E7849F /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C06F124289A3600E7849F /* PlaySound.swift */; };
 		3AA89F722448322F001C6817 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA89F712448322F001C6817 /* TitleView.swift */; };
@@ -72,6 +74,8 @@
 /* Begin PBXFileReference section */
 		3A1280A024902F2500D55B82 /* SettingsTriggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTriggerView.swift; sourceTree = "<group>"; };
 		3A1CE6D12424115D0050A396 /* RunningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningView.swift; sourceTree = "<group>"; };
+		3A2675012493772200D197AC /* RunningIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningIndicatorView.swift; sourceTree = "<group>"; };
+		3A2675032493787600D197AC /* TicksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicksView.swift; sourceTree = "<group>"; };
 		3A2DAFE424516FDB00F28608 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3A3F8FB7244DB13D00304489 /* UI_Confirm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = UI_Confirm.mp3; sourceTree = "<group>"; };
 		3A3F8FB9244DD5F700304489 /* Music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Music.mp3; sourceTree = "<group>"; };
@@ -99,7 +103,7 @@
 		3A99052424916DC8007DE9CC /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = "<group>"; };
 		3A99052524916DC8007DE9CC /* VerySoft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VerySoft@2x.png"; sourceTree = "<group>"; };
 		3A99052624916DC8007DE9CC /* VerySoft@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VerySoft@3x.png"; sourceTree = "<group>"; };
-		3A9C06ED24276FA800E7849F /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		3A9C06ED24276FA800E7849F /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 		3A9C06EF24289A1A00E7849F /* alert01.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = alert01.m4a; sourceTree = "<group>"; };
 		3A9C06F124289A3600E7849F /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		3AA89F712448322F001C6817 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
@@ -144,6 +148,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A2675002493762600D197AC /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				3AE5107C2460B13D00C10CC8 /* Countdown.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
 		3A54BE67245242C600E61807 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,7 +274,7 @@
 			children = (
 				3AA89F712448322F001C6817 /* TitleView.swift */,
 				3AAB87BA2431E27B009E44A2 /* WatchView.swift */,
-				3A9C06ED24276FA800E7849F /* CircleView.swift */,
+				3A9C06ED24276FA800E7849F /* ProgressCircleView.swift */,
 				3AB436EB244D7B0500460F0A /* GridStack.swift */,
 				3AB436E7244D79BD00460F0A /* BackgroundView.swift */,
 				3A7DC2A224444CAD0057874B /* SquareDot.swift */,
@@ -271,6 +283,8 @@
 				3AFDC100247F91B200AC2534 /* PlayButtonView.swift */,
 				3AFDC104247F920E00AC2534 /* StopButtonView.swift */,
 				3AFDC1082486800B00AC2534 /* ForceAnimationView.swift */,
+				3A2675012493772200D197AC /* RunningIndicatorView.swift */,
+				3A2675032493787600D197AC /* TicksView.swift */,
 			);
 			path = Graphics;
 			sourceTree = "<group>";
@@ -294,7 +308,7 @@
 				3ADF49E624240A34002C94BC /* IdleView.swift */,
 				3ADF49EB24240F2F002C94BC /* ChooseView.swift */,
 				3A1CE6D12424115D0050A396 /* RunningView.swift */,
-				3AE5107C2460B13D00C10CC8 /* Countdown.swift */,
+				3A2675002493762600D197AC /* Stores */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -431,7 +445,7 @@
 				3A805023245019E2001471F4 /* Audio.swift in Sources */,
 				3ABC8223244F96C100A1050C /* TextToSpeak.swift in Sources */,
 				3AFDC105247F920E00AC2534 /* StopButtonView.swift in Sources */,
-				3A9C06EE24276FA800E7849F /* CircleView.swift in Sources */,
+				3A9C06EE24276FA800E7849F /* ProgressCircleView.swift in Sources */,
 				3ADF49E924240C21002C94BC /* ViewState.swift in Sources */,
 				3A7DC2A324444CAD0057874B /* SquareDot.swift in Sources */,
 				3AAB87BB2431E27B009E44A2 /* WatchView.swift in Sources */,
@@ -442,6 +456,7 @@
 				3A5A3E872420180100190CFE /* SceneDelegate.swift in Sources */,
 				3A9C06F224289A3600E7849F /* PlaySound.swift in Sources */,
 				3AFDC101247F91B200AC2534 /* PlayButtonView.swift in Sources */,
+				3A2675022493772200D197AC /* RunningIndicatorView.swift in Sources */,
 				3ABC821D244F0A5800A1050C /* PreferenceUIHostingController.swift in Sources */,
 				3AB436EC244D7B0500460F0A /* GridStack.swift in Sources */,
 				3A2DAFE524516FDB00F28608 /* SettingsView.swift in Sources */,
@@ -452,6 +467,7 @@
 				3AFDC1072480E9D700AC2534 /* SettingsStore.swift in Sources */,
 				3A1CE6D22424115D0050A396 /* RunningView.swift in Sources */,
 				3A1280A124902F2500D55B82 /* SettingsTriggerView.swift in Sources */,
+				3A2675042493787600D197AC /* TicksView.swift in Sources */,
 				3A7FC283244CE89F000DA903 /* ArcView.swift in Sources */,
 				3AB436E8244D79BD00460F0A /* BackgroundView.swift in Sources */,
 				3ADF49EC24240F2F002C94BC /* ChooseView.swift in Sources */,

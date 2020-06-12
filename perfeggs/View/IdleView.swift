@@ -25,8 +25,17 @@ struct IdleView: View {
     
     var body: some View {
         ZStack {
-                        
+            
             ArcView(show:self.$show, running: .constant(false), themeColor: settingsStore.themeColor)
+            
+            if self.show {
+                Image("egg")
+                    .resizable()
+                    .frame(width: 37, height: 50)
+                    .opacity(0.75)
+                    .transition(AnyTransition.scaleAndFade(delay: 0.4))
+            }
+            
             ForceAnimationView(themeColor: settingsStore.themeColor, forceValue: self.$forceValue)
             
             GeometryReader { g in

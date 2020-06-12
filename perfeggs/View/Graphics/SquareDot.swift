@@ -16,7 +16,7 @@ struct SquareDot: View {
         ZStack {
             Rectangle()
                 .fill(themeColor)
-                .opacity(0.3)
+                .opacity(0.25)
                 .frame(width: 2, height: 2)
             
         }

@@ -9,26 +9,17 @@
 import Foundation
 import UserNotifications
 
-enum CounterMode {
-    case stopped
-    case running
-    case finished
-}
-
 class Countdown: ObservableObject {
-    
-    // defaults to stopped -> user has to start timer when ready
-    @Published var mode: CounterMode = .stopped
     
     var timer:Timer?
     var future: Date?
     var eggBoilTimeInSeconds:Int?
     let calendar = Calendar(identifier: .gregorian)
     
+    @Published var running = false // defaults to stopped -> user has to start timer when ready
+    @Published var finished = false
     @Published var remainingTimeInSeconds:Int = 0
-    
-    // Tracks the overall progress of the ticking timer. Value between 0 - 1
-    @Published var progess: Double = 0.0
+    @Published var progess: Double = 0.0 // Tracks the overall progress of the ticking timer. Value between 0 - 1
     
     init() {
         self.askForUserPermissionToSendLocationNotifications()
@@ -47,7 +38,7 @@ class Countdown: ObservableObject {
         
         self.future = Date().addingTimeInterval(TimeInterval(time))
         
-        self.mode = .running
+        self.running = true
         
         self.tick()
         
@@ -60,7 +51,8 @@ class Countdown: ObservableObject {
         self.future = nil
         self.progess = 0.0
         self.remainingTimeInSeconds = 0
-        self.mode = .stopped
+        self.running = false
+        
     }
     
     // MARK: - Timer / Counter
@@ -80,11 +72,11 @@ class Countdown: ObservableObject {
         guard let timeInSeconds = self.eggBoilTimeInSeconds else { return }
         guard let remainingTime = calendar.dateComponents([.second], from: Date(), to: future).second else { return }
         
-        print(self.progess)
+        // print(self.progess)
         
         if self.progess >= 1 {
             self.stop()
-            self.mode = .finished
+            self.finished = true
         }
         else {
             self.progess = 1 - (Double(remainingTime) / Double(timeInSeconds))
@@ -95,7 +87,7 @@ class Countdown: ObservableObject {
     // MARK: - Persistance
     
     func persistCountdown() -> Void {
-        if self.mode == .stopped { return }
+        if !self.running { return }
         if self.remainingTimeInSeconds <= 0 { return }
         
         self.scheduleLocalNotification(Double(self.remainingTimeInSeconds))

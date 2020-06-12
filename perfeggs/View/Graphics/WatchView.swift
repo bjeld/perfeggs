@@ -8,30 +8,7 @@
 
 import SwiftUI
 
-struct Tick: Shape {
-    var isLong: Bool = true
-    
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        path.move(to: CGPoint(x: rect.midX, y: rect.minY + 10))
-        path.addLine(to: CGPoint(x: rect.midX, y: rect.minY + 15 + (isLong ? 5 : 0)))
-        return path
-    }
-    
-}
 
-struct Ticks: View {
-    @State private var isAnimating = false
-    var body: some View {
-        ZStack {
-            ForEach(0..<60) { position in
-                Tick()
-                    .stroke(lineWidth: 1)
-                    .rotationEffect(.radians(Double.pi*2 / 60 * Double(position)))
-            }
-        }
-    }
-}
 
 struct WatchView: View {
     
@@ -43,17 +20,6 @@ struct WatchView: View {
     
     var body: some View {
         ZStack {
-            Ticks()
-                .frame(width: 130,height: 130)
-                .foregroundColor(themeColor)
-                .opacity(show ? 0.4 : 0)
-                .animation(Animation.spring().delay(0.2))
-                .rotationEffect(.degrees(spin ? -360 : 0))
-                .animation(Animation.linear(duration: 60).repeatForever(autoreverses: false))
-                .onAppear() {
-                    self.spin.toggle()
-            }
-            
             Circle()
                 .stroke(themeColor, style: StrokeStyle(lineWidth: 40))
                 .opacity(show ? 0.05 : 0.0)
@@ -72,7 +38,7 @@ struct WatchView: View {
                 .frame(width: show ? 156 : 0, height: show ? 156 : 0)
                 .animation(Animation.spring().delay(0.4))
             
-            CircleView(progress: (100-progress)/100, color: themeColor)
+            ProgressCircleView(progress: (100-progress)/100, color: themeColor)
                 .frame(width: 156, height: 156)
             
             Circle()

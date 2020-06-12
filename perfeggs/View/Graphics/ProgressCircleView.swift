@@ -18,19 +18,13 @@ struct ProgressCircleView: View {
     var body: some View {
         
         Circle()
-            
             .trim(from: progress, to: 1)
-            .stroke(
-                color,
-                style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round, miterLimit: .infinity, dash: [20, 0], dashPhase: 0)
-        )
+            .stroke(color, style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round, miterLimit: .infinity, dash: [20, 0], dashPhase: 0))
             .animation(.linear(duration:1))
             .rotationEffect(Angle(degrees: 90))
             .rotation3DEffect(Angle(degrees: 180), axis: (x: 1, y: 0, z: 0))
             .shadow(color: color.opacity(0.5), radius: 12, x: 0, y: 0)
             .frame(width: 156, height: 156)
-        
-        
     }
 }
 

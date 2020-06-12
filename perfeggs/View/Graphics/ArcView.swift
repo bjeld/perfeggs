@@ -37,7 +37,7 @@ struct ArcView: View {
             
             if show {
                 
-                Ticks()
+                TicksView()
                     .foregroundColor(themeColor)
                     .opacity(0.4)
                     .frame(width: 130, height: 130)
@@ -54,12 +54,7 @@ struct ArcView: View {
                     .opacity(0.25)
                     .frame(width: 156, height: 156)
                     .transition(AnyTransition.scaleAndFade(delay: 0.3))
-                
-                Image("egg")
-                    .resizable()
-                    .frame(width: 37, height: 50)
-                    .opacity(0.75)
-                    .transition(AnyTransition.scaleAndFade(delay: 0.4))
+               
             }
             
             
