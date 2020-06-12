@@ -182,9 +182,9 @@
 		3A5A3E832420180100190CFE /* perfeggs */ = {
 			isa = PBXGroup;
 			children = (
-				3A9904EC24916170007DE9CC /* AlternateAppIcons */,
 				3A5A3E842420180100190CFE /* AppDelegate.swift */,
 				3A5A3E862420180100190CFE /* SceneDelegate.swift */,
+				3A9904EC24916170007DE9CC /* AlternateAppIcons */,
 				3ADF49C3242404C0002C94BC /* View */,
 				3ADF49C2242404B4002C94BC /* Model */,
 				3ABAA32F2426D37400125EB9 /* Sounds */,

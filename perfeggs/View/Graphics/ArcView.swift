@@ -8,41 +8,59 @@
 
 import SwiftUI
 
+extension AnyTransition {
+    static func scaleAndFade(delay: Double = 0) -> AnyTransition {
+        
+        let insertion = AnyTransition.scale.combined(with: .opacity)
+            .animation(Animation.spring(response: 0.6, dampingFraction: 0.5)
+                .speed(1.2)
+                .delay(delay))
+        let removal = AnyTransition.scale.combined(with: .opacity)
+            .animation(Animation.spring(response: 0.6, dampingFraction: 0.5).speed(1.2))
+        
+        return .asymmetric(insertion: insertion, removal: removal)
+    }
+}
+
+
 struct ArcView: View {
     
     // LOCAL STATE
     @Binding var show:Bool
+    @Binding var running:Bool
     
     var themeColor: Color
-  
+    
     // UI
     var body: some View {
         ZStack {
-            Ticks()
-                .frame(width: show ? 130 : 0, height: show ? 130: 0)
-                .foregroundColor(themeColor)
-                .opacity(show ? 0.4 : 0)
-                .animation(Animation.spring().delay(0.2))
             
-            Circle()
-                .stroke(themeColor, style: StrokeStyle(lineWidth: 40))
-                .opacity(show ? 0.05 : 0)
-                .frame(width: show ? 214 : 0, height: show ? 214 : 0)
-                .animation(Animation.spring().delay(0.3))
-            
-            Circle()
-                .stroke(themeColor, style: StrokeStyle(lineWidth: 1))
-                .opacity(show ? 0.25 : 0)
-                .frame(width: show ? 156 : 0, height: show ? 156 : 0)
-                .animation(Animation.spring().delay(0.4))
-            
-            
+            if show {
                 
-            Image("egg")
-                .resizable()
-                .frame(width: 37, height: 50)
-                .opacity(show ? 0.75 : 0)
-                .animation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true).delay(2))
+                Ticks()
+                    .foregroundColor(themeColor)
+                    .opacity(0.4)
+                    .frame(width: 130, height: 130)
+                    .transition(AnyTransition.scaleAndFade(delay: 0.1))
+                
+                Circle()
+                    .stroke(themeColor, style: StrokeStyle(lineWidth: 40))
+                    .opacity(0.05)
+                    .frame(width: 214, height: 214)
+                    .transition(AnyTransition.scaleAndFade(delay: 0.2))
+                
+                Circle()
+                    .stroke(themeColor, style: StrokeStyle(lineWidth: 1))
+                    .opacity(0.25)
+                    .frame(width: 156, height: 156)
+                    .transition(AnyTransition.scaleAndFade(delay: 0.3))
+                
+                Image("egg")
+                    .resizable()
+                    .frame(width: 37, height: 50)
+                    .opacity(0.75)
+                    .transition(AnyTransition.scaleAndFade(delay: 0.4))
+            }
             
             
         }.edgesIgnoringSafeArea(.all)
@@ -50,12 +68,13 @@ struct ArcView: View {
 }
 
 struct ArcView_Previews: PreviewProvider {
-   
+    
     
     struct TextArcView: View {
         @State var show = true
+        @State var running = false
         var body: some View {
-            ArcView(show: self.$show, themeColor: Color.red)
+            ArcView(show: self.$show, running: self.$running, themeColor: Color.red)
         }
     }
     

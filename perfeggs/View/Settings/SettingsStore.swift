@@ -36,7 +36,8 @@ class SettingsStore: ObservableObject {
     
     var themeColor: Color {
         get {
-            return Color(#colorLiteral(red: 0.9823682904, green: 0.465690136, blue: 0.3660199642, alpha: 1))
+            return Color(#colorLiteral(red: 0, green: 0.9914394021, blue: 1, alpha: 1))
+            //return Color(#colorLiteral(red: 0.9823682904, green: 0.465690136, blue: 0.3660199642, alpha: 1))
             // return Color.pink
         }
     }

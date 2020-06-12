@@ -25,14 +25,15 @@ struct IdleView: View {
     
     var body: some View {
         ZStack {
+                        
+            ArcView(show:self.$show, running: .constant(false), themeColor: settingsStore.themeColor)
             ForceAnimationView(themeColor: settingsStore.themeColor, forceValue: self.$forceValue)
-            ArcView(show:self.$show, themeColor: settingsStore.themeColor)
             
             GeometryReader { g in
                 EggsViewController(forceValue: self.$forceValue ).frame(width: g.size.width, height: g.size.height / 2)
             }
         }
-        
+            
         .animation(.default)
         .onAppear() {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
@@ -103,7 +104,6 @@ struct IdleView: View {
                     else {
                         
                         switch self.settingsStore.eggBoilMode {
-                            
                         case .skipToHardBoiled:
                             self.viewState.eggBoil = .hard
                             

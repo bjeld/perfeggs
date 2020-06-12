@@ -8,16 +8,8 @@
 
 import SwiftUI
 
-
-
-
-
-
-
 struct ContentView: View {
     
-    @State var isRoomTemperature = false
-   
     @EnvironmentObject var viewState:ViewState
     @EnvironmentObject var settingsStore:SettingsStore
     
@@ -39,8 +31,6 @@ struct ContentView: View {
             }
             
             SettingsTriggerView()
-           
-            
         }
         .onAppear() {
             UNUserNotificationCenter.current().requestAuthorization(options: [.badge,.sound,.alert]) { (_, _) in }
