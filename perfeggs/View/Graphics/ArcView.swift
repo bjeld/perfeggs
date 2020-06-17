@@ -42,6 +42,8 @@ struct ArcView: View {
                     .opacity(0.4)
                     .frame(width: 130, height: 130)
                     .transition(AnyTransition.scaleAndFade(delay: 0.1))
+                    .rotationEffect(.degrees(running ? -360 : 0))
+                    .animation(running ? Animation.linear(duration: 60).repeatForever(autoreverses: false) : .default)
                 
                 Circle()
                     .stroke(themeColor, style: StrokeStyle(lineWidth: 40))

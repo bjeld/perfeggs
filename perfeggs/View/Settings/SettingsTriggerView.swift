@@ -31,7 +31,25 @@ struct SettingsTriggerView: View {
                             .opacity(0.5)
                     }
                 }
-                Spacer()
+               Spacer()
+            }
+            Spacer()
+        }.sheet(isPresented: self.$showSettings, content: {
+            SettingsView(isPresented: self.$showSettings).environmentObject(self.settingsStore)
+        })
+    }
+}
+
+
+struct SettingsTriggerView_Previews: PreviewProvider {
+    static var previews: some View {
+        SettingsTriggerView()
+    }
+}
+
+
+/*
+ Spacer()
                 Button(action: {
                     Audio.shared.toggleMusicVolume()
                 }) {
@@ -47,17 +65,4 @@ struct SettingsTriggerView: View {
                     }
                 }
                 Spacer().frame(width: 25)
-            }
-            Spacer()
-        }.sheet(isPresented: self.$showSettings, content: {
-            SettingsView(isPresented: self.$showSettings).environmentObject(self.settingsStore)
-        })
-    }
-}
-
-
-struct SettingsTriggerView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsTriggerView()
-    }
-}
+ */

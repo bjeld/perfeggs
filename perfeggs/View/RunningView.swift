@@ -19,60 +19,53 @@ struct RunningView: View {
     var body: some View {
         
         ZStack {
-            // WatchView(progress: CGFloat(countdown.progess) * 100, themeColor: settingStore.themeColor)
+            
             ArcView(show: self.$show, running: self.$countdown.running, themeColor: settingStore.themeColor)
             RunningIndicatorView(themeColor: settingStore.themeColor, show: self.$show, running: self.$countdown.running)
-           
+            
             if self.show {
-            ProgressCircleView(progress: CGFloat(countdown.progess), color: settingStore.themeColor)
-                .transition(AnyTransition.scaleAndFade(delay: 0.5))
+                ProgressCircleView(progress: CGFloat(countdown.progess), color: settingStore.themeColor)
+                    .transition(AnyTransition.scaleAndFade(delay: 0.5))
             }
             
             
-               if self.show {
-            TitleView(firstText: "Boil time", lastText: self.viewState.getEggBoilLabel(), themeColor: settingStore.themeColor ).offset(x: 0, y: -240)
-                .transition(AnyTransition.scaleAndFade(delay: 1.5))
-                }
+            if self.show {
+                TitleView(firstText: "Boil time", lastText: self.viewState.getEggBoilLabel(), themeColor: settingStore.themeColor )
+                    .offset(x: 0, y: -240)
+                    .transition(AnyTransition.opacity.animation(Animation.linear(duration: 1).delay(1)))
+            }
             
             // PLAY BUTTON
             if !self.countdown.running {
                 if self.show {
-                    
-                
-                Button(action: {
-                    self.countdown.start()
-                    TextToSpeak.shared.speakTimerStarted()
-                }) {
-                    PlayButtonView(themeColor: settingStore.themeColor)
-                }
-                .opacity(self.countdown.running ? 0 : 1)
-                .transition(AnyTransition.scaleAndFade(delay: 0.6))
+                    Button(action: {
+                        self.countdown.start()
+                        TextToSpeak.shared.speakTimerStarted()
+                    }) {
+                        PlayButtonView(themeColor: settingStore.themeColor)
                     }
+                    .transition(AnyTransition.scaleAndFade(delay: 0.6))
+                }
             }
             
             // STOP BUTTON
-             if self.show {
-            Button(action: {
-                if self.countdown.running {
-                    self.showingAlert = true
+            if self.show {
+                Button(action: {
+                    if self.countdown.running {
+                        self.showingAlert = true
+                    }
+                    else {
+                        self.countdown.stop()
+                        self.viewState.currentView = .idle
+                    }
+                }) {
+                    StopButtonView(themeColor: settingStore.themeColor)
                 }
-                else {
-                    self.countdown.stop()
-                    self.viewState.currentView = .idle
-                }
-            }) {
-                StopButtonView(themeColor: settingStore.themeColor)
+                .offset(x: 0, y: 240)
+                .transition(AnyTransition.scaleAndFade(delay: 0.9))
             }
-            .offset(x: 0, y: 240)
-                 .transition(AnyTransition.scaleAndFade(delay: 0.9))
-              }
             
-            if self.countdown.running {
-                
-                Text("\(Int(countdown.progess*100))%")
-                    .foregroundColor(settingStore.themeColor)
-                    .bold()
-            }
+         
             
             Image(getEggImage())
                 .resizable()
@@ -98,12 +91,8 @@ struct RunningView: View {
             self.show = true
         }
         .actionSheet(isPresented: $showingAlert) {
-            ActionSheet(title: Text("Do you want to cancel the timer"), buttons: [.cancel(Text("No, continue")), .destructive(Text("Yes, cancel timer")) {
+            ActionSheet(title: Text("Do you want to cancel the timer"), buttons: [.default(Text("No, continue")), .destructive(Text("Yes, cancel timer")) {
                 self.countdown.stop()
-                
-                
-                
-                
                 self.viewState.currentView = .idle
                 }])
         }
@@ -126,3 +115,10 @@ struct RunningView: View {
     
     
 }
+/*
+ if self.countdown.running {
+              Text("\(Int(countdown.progess*100))%")
+                  .foregroundColor(settingStore.themeColor)
+                  .bold()
+          }
+ */

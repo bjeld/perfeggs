@@ -103,7 +103,7 @@ struct IdleView: View {
                 self.show = false
                 
                 // make time for the hide graphical animation to complete before transitioning to next screen
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
                     self.timer.upstream.connect().cancel()
                     self.viewState.setWeightValue(value: self.endValue)
                     
