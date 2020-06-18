@@ -36,8 +36,8 @@ class SettingsStore: ObservableObject {
     
     var themeColor: Color {
         get {
-            return Color(#colorLiteral(red: 0.744276464, green: 0.9717748761, blue: 0.9747421145, alpha: 1))
-            //return Color(#colorLiteral(red: 0.9823682904, green: 0.465690136, blue: 0.3660199642, alpha: 1))
+            //return Color(#colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1))
+            return Color(#colorLiteral(red: 0.9823682904, green: 0.465690136, blue: 0.3660199642, alpha: 1))
             // return Color.pink
         }
     }
@@ -57,8 +57,6 @@ class SettingsStore: ObservableObject {
         set {
             defaults.set(newValue.rawValue, forKey: Keys.eggBoilMode)
             
-            
-            
             switch newValue {
             case .skipToVerySoftBoiled:
                 changeIcon(to: "VerySoft")
@@ -72,15 +70,13 @@ class SettingsStore: ObservableObject {
             default:
                 changeIcon(to: nil)
             }
-            
-            
-           
         }
     }
     
     var eggStorageMode: EggStorageMode {
         get {
-            return defaults.string(forKey: Keys.eggStorageMode)
+            return defaults
+                .string(forKey: Keys.eggStorageMode)
                 .flatMap { EggStorageMode(rawValue: $0) } ?? .fridge
         }
         
@@ -89,8 +85,6 @@ class SettingsStore: ObservableObject {
         }
     }
     
-    
-    
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
         
@@ -98,13 +92,5 @@ class SettingsStore: ObservableObject {
             Keys.eggBoilMode: EggBoilMode.choose.rawValue,
             Keys.eggStorageMode: EggStorageMode.fridge.rawValue
         ])
-        
-        
     }
-    
-   
-    
-   
-    
-   
 }

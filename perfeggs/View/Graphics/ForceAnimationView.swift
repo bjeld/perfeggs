@@ -20,7 +20,7 @@ struct ForceAnimationView: View {
         ZStack {
             Circle()
                 .foregroundColor(themeColor)
-                .opacity(0.05)
+                .opacity(0.025)
                 .scaleEffect(x:forceValue*1.8, y: forceValue*1.8)
                 .animation(.spring())
         }.onAppear() {

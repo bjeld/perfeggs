@@ -47,7 +47,8 @@ struct ArcView: View {
                 
                 Circle()
                     .stroke(themeColor, style: StrokeStyle(lineWidth: 40))
-                    .opacity(0.05)
+                    .opacity(running ? 0.6 : 0.2)
+                    .animation(running ? Animation.easeInOut(duration: 2).repeatForever() : .default)
                     .frame(width: 214, height: 214)
                     .transition(AnyTransition.scaleAndFade(delay: 0.2))
                 
@@ -56,7 +57,7 @@ struct ArcView: View {
                     .opacity(0.25)
                     .frame(width: 156, height: 156)
                     .transition(AnyTransition.scaleAndFade(delay: 0.3))
-               
+                
             }
             
             

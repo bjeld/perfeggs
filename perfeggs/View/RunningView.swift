@@ -21,13 +21,15 @@ struct RunningView: View {
         ZStack {
             
             ArcView(show: self.$show, running: self.$countdown.running, themeColor: settingStore.themeColor)
-            RunningIndicatorView(themeColor: settingStore.themeColor, show: self.$show, running: self.$countdown.running)
+            if self.show {
+                RunningIndicatorView(themeColor: settingStore.themeColor, show: self.$show, running: self.$countdown.running)
+                    .transition(AnyTransition.scaleAndFade(delay: 0.7))
+            }
             
             if self.show {
                 ProgressCircleView(progress: CGFloat(countdown.progess), color: settingStore.themeColor)
                     .transition(AnyTransition.scaleAndFade(delay: 0.5))
             }
-            
             
             if self.show {
                 TitleView(firstText: "Boil time", lastText: self.viewState.getEggBoilLabel(), themeColor: settingStore.themeColor )

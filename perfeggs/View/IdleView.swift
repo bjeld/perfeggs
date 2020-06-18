@@ -13,7 +13,7 @@ struct IdleView: View {
     @EnvironmentObject var viewState:ViewState
     @EnvironmentObject var settingsStore:SettingsStore
     
-    var targetCount = 50
+    var targetCount = 60
     var isTimerRunning = false
     let timer = Timer.publish(every: 0.1, tolerance: 0.1, on: .main, in: .common).autoconnect()
     
@@ -22,13 +22,20 @@ struct IdleView: View {
     @State private var endValue:CGFloat = 0
     @State private var isWeighingCompleted:Bool = false
     @State private var show:Bool = false
+    @State private var showPulsate:Bool = false
     
     var body: some View {
         ZStack {
             
-            ArcView(show:self.$show, running: .constant(false), themeColor: settingsStore.themeColor)
+            if self.showPulsate {
+                PulsateAnimationView()
+            }
+            
+            ScanningView(show:self.$show, running: .constant(false), themeColor: settingsStore.themeColor)
+            
             
             if self.show {
+                
                 Image("egg")
                     .resizable()
                     .frame(width: 37, height: 50)
@@ -37,6 +44,8 @@ struct IdleView: View {
             }
             
             ForceAnimationView(themeColor: settingsStore.themeColor, forceValue: self.$forceValue)
+            
+            
             
             GeometryReader { g in
                 EggsViewController(forceValue: self.$forceValue ).frame(width: g.size.width, height: g.size.height / 2)
@@ -51,7 +60,7 @@ struct IdleView: View {
             
             self.show = true
             TextToSpeak.shared.speakPutEggOnScreen()
-            Audio.shared.playMusicSoundLoop()
+            // Audio.shared.playMusicSoundLoop()
         }
         .onReceive(timer) { (time) in
             // If we are not showing the grahical animations yet the we should not tick the count
@@ -63,6 +72,7 @@ struct IdleView: View {
             if !self.isWeighingCompleted {
                 
                 if self.counter == 2 {
+                    self.showPulsate = true
                     TextToSpeak.shared.speakScanning()
                 }
                 
@@ -73,6 +83,7 @@ struct IdleView: View {
                     // Reset tick counter when still wheighing but egg was removed before wheighing completed
                 else if self.counter != 0 {
                     self.counter = 0
+                    self.showPulsate = false
                 }
             }
             
