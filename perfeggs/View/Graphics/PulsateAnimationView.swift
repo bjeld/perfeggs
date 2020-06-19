@@ -17,11 +17,17 @@ struct PulsateAnimationView: View {
     var body: some View {
         ZStack {
             if showPulsate {
-                PulsateMultipleView()
+                
+                PulsateMultipleView().onAppear() {
+                    let generator = UINotificationFeedbackGenerator()
+                    generator.notificationOccurred(.success)
+                }
+                
             }
         }
         .onReceive(timer) { time in
             self.showPulsate.toggle()
+            
         }
         .onAppear() {
             self.showPulsate = true

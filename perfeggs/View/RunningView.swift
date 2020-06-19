@@ -20,7 +20,13 @@ struct RunningView: View {
         
         ZStack {
             
+            
+            Color.white.opacity(self.countdown.finished ? 0.10 : 0).animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true))
+            
+            
+            
             ArcView(show: self.$show, running: self.$countdown.running, themeColor: settingStore.themeColor)
+           
             if self.show {
                 RunningIndicatorView(themeColor: settingStore.themeColor, show: self.$show, running: self.$countdown.running)
                     .transition(AnyTransition.scaleAndFade(delay: 0.7))
@@ -31,10 +37,10 @@ struct RunningView: View {
                     .transition(AnyTransition.scaleAndFade(delay: 0.5))
             }
             
-            if self.show {
+            if self.show && !self.countdown.finished {
                 TitleView(firstText: "Boil time", lastText: self.viewState.getEggBoilLabel(), themeColor: settingStore.themeColor )
                     .offset(x: 0, y: -240)
-                    .transition(AnyTransition.opacity.animation(Animation.linear(duration: 1).delay(1)))
+                   
             }
             
             // PLAY BUTTON
@@ -51,7 +57,7 @@ struct RunningView: View {
             }
             
             // STOP BUTTON
-            if self.show {
+            if self.show && !self.countdown.finished {
                 Button(action: {
                     if self.countdown.running {
                         self.showingAlert = true
@@ -96,6 +102,11 @@ struct RunningView: View {
                 self.countdown.stop()
                 self.viewState.currentView = .idle
                 }])
+        }
+        .onTapGesture {
+            if self.countdown.finished {
+                self.viewState.currentView = .idle
+            }
         }
         
     }

@@ -35,7 +35,6 @@ struct IdleView: View {
             
             
             if self.show {
-                
                 Image("egg")
                     .resizable()
                     .frame(width: 37, height: 50)
@@ -43,7 +42,7 @@ struct IdleView: View {
                     .transition(AnyTransition.scaleAndFade(delay: 0.4))
             }
             
-            ForceAnimationView(themeColor: settingsStore.themeColor, forceValue: self.$forceValue)
+            // ForceAnimationView(themeColor: settingsStore.themeColor, forceValue: self.$forceValue)
             
             
             
@@ -92,8 +91,8 @@ struct IdleView: View {
                 self.endValue = self.forceValue
                 self.isWeighingCompleted = true
                 
-                let generator = UINotificationFeedbackGenerator()
-                generator.notificationOccurred(.success)
+                //let generator = UINotificationFeedbackGenerator()
+                //generator.notificationOccurred(.success)
                 
                 switch self.endValue {
                 case 0.1...0.8:

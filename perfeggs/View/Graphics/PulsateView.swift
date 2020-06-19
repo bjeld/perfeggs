@@ -22,8 +22,8 @@ struct PulsateView: View {
             .onAppear(){
                 DispatchQueue.main.asyncAfter(deadline: .now() + self.delay) {
                     self.show = true
-                }
-                
+                  
+                }       
         }
     }
 }
