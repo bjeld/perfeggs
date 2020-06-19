@@ -29,6 +29,8 @@ class Countdown: ObservableObject {
     
     func setup(eggBoilTimeInSeconds: Int) -> Void {
         self.eggBoilTimeInSeconds = eggBoilTimeInSeconds
+        self.finished = false
+        self.running = false
         print(eggBoilTimeInSeconds)
     }
     

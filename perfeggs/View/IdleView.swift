@@ -42,7 +42,7 @@ struct IdleView: View {
                     .transition(AnyTransition.scaleAndFade(delay: 0.4))
             }
             
-            // ForceAnimationView(themeColor: settingsStore.themeColor, forceValue: self.$forceValue)
+           ForceAnimationView(themeColor: settingsStore.themeColor, forceValue: self.$forceValue)
             
             
             

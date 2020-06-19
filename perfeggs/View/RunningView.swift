@@ -21,9 +21,8 @@ struct RunningView: View {
         ZStack {
             
             
-            Color.white.opacity(self.countdown.finished ? 0.10 : 0).animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true))
-            
-            
+            Color.white.opacity(self.countdown.finished ? 0.10 : 0)
+                .animation(self.countdown.finished ? Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true) : .default)
             
             ArcView(show: self.$show, running: self.$countdown.running, themeColor: settingStore.themeColor)
            
@@ -105,6 +104,7 @@ struct RunningView: View {
         }
         .onTapGesture {
             if self.countdown.finished {
+                self.countdown.finished = false
                 self.viewState.currentView = .idle
             }
         }
