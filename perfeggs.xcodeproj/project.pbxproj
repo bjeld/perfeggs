@@ -17,13 +17,13 @@
 		3A37B860249A9DF30047CDF8 /* PulsateAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A37B85F249A9DF30047CDF8 /* PulsateAnimationView.swift */; };
 		3A37B862249AA8670047CDF8 /* ScanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A37B861249AA8670047CDF8 /* ScanningView.swift */; };
 		3A37B881249C00DC0047CDF8 /* Soft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A37B877249C00DB0047CDF8 /* Soft@2x.png */; };
-		3A37B882249C00DC0047CDF8 /* Very_Soft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A37B878249C00DB0047CDF8 /* Very_Soft@2x.png */; };
+		3A37B882249C00DC0047CDF8 /* VerySoft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A37B878249C00DB0047CDF8 /* VerySoft@2x.png */; };
 		3A37B883249C00DC0047CDF8 /* Hard@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A37B879249C00DB0047CDF8 /* Hard@3x.png */; };
 		3A37B885249C00DC0047CDF8 /* Medium@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A37B87B249C00DB0047CDF8 /* Medium@3x.png */; };
 		3A37B886249C00DC0047CDF8 /* Soft@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A37B87C249C00DB0047CDF8 /* Soft@3x.png */; };
 		3A37B887249C00DC0047CDF8 /* Hard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A37B87D249C00DB0047CDF8 /* Hard@2x.png */; };
 		3A37B888249C00DC0047CDF8 /* Medium@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A37B87E249C00DC0047CDF8 /* Medium@2x.png */; };
-		3A37B88A249C00DC0047CDF8 /* Very_Soft@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A37B880249C00DC0047CDF8 /* Very_Soft@3x.png */; };
+		3A37B88A249C00DC0047CDF8 /* VerySoft@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A37B880249C00DC0047CDF8 /* VerySoft@3x.png */; };
 		3A3F8FB8244DB13D00304489 /* UI_Confirm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3A3F8FB7244DB13D00304489 /* UI_Confirm.mp3 */; };
 		3A3F8FBA244DD5F700304489 /* Music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3A3F8FB9244DD5F700304489 /* Music.mp3 */; };
 		3A5A3E852420180100190CFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A3E842420180100190CFE /* AppDelegate.swift */; };
@@ -83,13 +83,13 @@
 		3A37B85F249A9DF30047CDF8 /* PulsateAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsateAnimationView.swift; sourceTree = "<group>"; };
 		3A37B861249AA8670047CDF8 /* ScanningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningView.swift; sourceTree = "<group>"; };
 		3A37B877249C00DB0047CDF8 /* Soft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Soft@2x.png"; sourceTree = "<group>"; };
-		3A37B878249C00DB0047CDF8 /* Very_Soft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Very_Soft@2x.png"; sourceTree = "<group>"; };
+		3A37B878249C00DB0047CDF8 /* VerySoft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VerySoft@2x.png"; sourceTree = "<group>"; };
 		3A37B879249C00DB0047CDF8 /* Hard@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hard@3x.png"; sourceTree = "<group>"; };
 		3A37B87B249C00DB0047CDF8 /* Medium@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Medium@3x.png"; sourceTree = "<group>"; };
 		3A37B87C249C00DB0047CDF8 /* Soft@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Soft@3x.png"; sourceTree = "<group>"; };
 		3A37B87D249C00DB0047CDF8 /* Hard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hard@2x.png"; sourceTree = "<group>"; };
 		3A37B87E249C00DC0047CDF8 /* Medium@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Medium@2x.png"; sourceTree = "<group>"; };
-		3A37B880249C00DC0047CDF8 /* Very_Soft@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Very_Soft@3x.png"; sourceTree = "<group>"; };
+		3A37B880249C00DC0047CDF8 /* VerySoft@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VerySoft@3x.png"; sourceTree = "<group>"; };
 		3A3F8FB7244DB13D00304489 /* UI_Confirm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = UI_Confirm.mp3; sourceTree = "<group>"; };
 		3A3F8FB9244DD5F700304489 /* Music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Music.mp3; sourceTree = "<group>"; };
 		3A5A3E812420180100190CFE /* Perfeggs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Perfeggs.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,8 +230,8 @@
 				3A37B87B249C00DB0047CDF8 /* Medium@3x.png */,
 				3A37B877249C00DB0047CDF8 /* Soft@2x.png */,
 				3A37B87C249C00DB0047CDF8 /* Soft@3x.png */,
-				3A37B878249C00DB0047CDF8 /* Very_Soft@2x.png */,
-				3A37B880249C00DC0047CDF8 /* Very_Soft@3x.png */,
+				3A37B878249C00DB0047CDF8 /* VerySoft@2x.png */,
+				3A37B880249C00DC0047CDF8 /* VerySoft@3x.png */,
 			);
 			path = AlternateAppIcons;
 			sourceTree = "<group>";
@@ -398,12 +398,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A37B88A249C00DC0047CDF8 /* Very_Soft@3x.png in Resources */,
+				3A37B88A249C00DC0047CDF8 /* VerySoft@3x.png in Resources */,
 				3ABC821F244F26BB00A1050C /* Fanfare.mp3 in Resources */,
 				3A37B887249C00DC0047CDF8 /* Hard@2x.png in Resources */,
 				3A37B883249C00DC0047CDF8 /* Hard@3x.png in Resources */,
 				3A3F8FBA244DD5F700304489 /* Music.mp3 in Resources */,
-				3A37B882249C00DC0047CDF8 /* Very_Soft@2x.png in Resources */,
+				3A37B882249C00DC0047CDF8 /* VerySoft@2x.png in Resources */,
 				3ABC822A244F9FDE00A1050C /* Kill_Enemy_6.mp3 in Resources */,
 				3ABC822C244F9FDE00A1050C /* Kill_Enemy_5.mp3 in Resources */,
 				3ABC822B244F9FDE00A1050C /* Kill_Enemy_7.mp3 in Resources */,
@@ -619,6 +619,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"perfeggs/Preview Content\"";
 				DEVELOPMENT_TEAM = 72453LZU7L;
 				ENABLE_PREVIEWS = YES;
@@ -639,6 +640,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"perfeggs/Preview Content\"";
 				DEVELOPMENT_TEAM = 72453LZU7L;
 				ENABLE_PREVIEWS = YES;

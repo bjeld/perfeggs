@@ -12,7 +12,7 @@ struct PulsateMultipleView: View {
     var body: some View {
         ZStack {
             PulsateView(delay: 0.1)
-            PulsateView(delay: 0.3)
+            PulsateView(delay: 0.4)
         }
     }
 }

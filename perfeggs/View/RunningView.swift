@@ -26,7 +26,7 @@ struct RunningView: View {
                     .transition(AnyTransition.scaleAndFade(delay: 0.7))
             }
             
-            if self.show {
+            if self.show && !self.countdown.finished {
                 ProgressCircleView(progress: CGFloat(countdown.progess), color: settingStore.themeColor)
                     .transition(AnyTransition.scaleAndFade(delay: 0.5))
             }
@@ -38,7 +38,7 @@ struct RunningView: View {
             }
             
             // PLAY BUTTON
-            if !self.countdown.running {
+            if !self.countdown.running && !self.countdown.finished {
                 if self.show {
                     Button(action: {
                         self.countdown.start()
@@ -67,13 +67,12 @@ struct RunningView: View {
                 .transition(AnyTransition.scaleAndFade(delay: 0.9))
             }
             
-         
+            if self.countdown.finished {
+                Image(getEggImage())
+                    .resizable()
+                    .frame(width: 37, height: 50)
+            }
             
-            Image(getEggImage())
-                .resizable()
-                .frame(width: 37, height: 50)
-                .opacity(self.countdown.finished ? 1 : 0)
-                .animation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true).delay(2))
             
         }
         .onAppear() {
@@ -102,15 +101,16 @@ struct RunningView: View {
     }
     
     private func getEggImage() -> String {
+        
         switch self.viewState.eggBoil {
         case .verySoft:
-            return "extra_soft"
+            return "finished_very_soft"
         case .soft:
-            return "soft"
+            return "finished_soft"
         case .medium:
-            return "medium"
+            return "finished_menium"
         case .hard:
-            return "hard"
+            return "finished_hard"
         }
         
     }
@@ -119,8 +119,8 @@ struct RunningView: View {
 }
 /*
  if self.countdown.running {
-              Text("\(Int(countdown.progess*100))%")
-                  .foregroundColor(settingStore.themeColor)
-                  .bold()
-          }
+ Text("\(Int(countdown.progess*100))%")
+ .foregroundColor(settingStore.themeColor)
+ .bold()
+ }
  */

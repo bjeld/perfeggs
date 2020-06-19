@@ -37,11 +37,9 @@ class Countdown: ObservableObject {
         guard let time = self.eggBoilTimeInSeconds else { return }
         
         self.future = Date().addingTimeInterval(TimeInterval(time))
-        
+        self.finished = false
         self.running = true
-        
         self.tick()
-        
         self.startTimer()
     }
     
@@ -51,8 +49,17 @@ class Countdown: ObservableObject {
         self.future = nil
         self.progess = 0.0
         self.remainingTimeInSeconds = 0
+        self.finished = false
         self.running = false
-        
+    }
+    
+    func finish() -> Void {
+        self.stopTimer()
+        self.future = nil
+        self.progess = 0.0
+        self.remainingTimeInSeconds = 0
+        self.finished = true
+        self.running = false
     }
     
     // MARK: - Timer / Counter
@@ -75,8 +82,7 @@ class Countdown: ObservableObject {
         // print(self.progess)
         
         if self.progess >= 1 {
-            self.stop()
-            self.finished = true
+            self.finish()
         }
         else {
             self.progess = 1 - (Double(remainingTime) / Double(timeInSeconds))
@@ -98,7 +104,6 @@ class Countdown: ObservableObject {
             UserDefaults.standard.set(futureReference, forKey: "futureReference")
             // save total egg boiling time
             UserDefaults.standard.set(eggBoilTimeInSeconds, forKey: "eggBoilTimeInSeconds")
-            
         }
     }
     
@@ -118,12 +123,8 @@ class Countdown: ObservableObject {
                 self.setup(eggBoilTimeInSeconds: eggBoilTimeInSeconds)
                 self.remainingTimeInSeconds = Int(diff)
                 self.progess = 1 - (Double(diff) / Double(eggBoilTimeInSeconds))
-                
-                // self.resume()
-                // self.start(timeInSeconds: Int(diff))
             }
             
-            // print("futureReference: \(futureReference) : now: \(nowReference)")
             UserDefaults.standard.removeObject(forKey: "futureReference")
         }
     }

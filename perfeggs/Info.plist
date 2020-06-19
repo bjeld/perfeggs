@@ -10,6 +10,33 @@
 	<dict>
 		<key>CFBundleAlternateIcons</key>
 		<dict>
+			<key>Hard</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>Hard</string>
+				</array>
+				<key>Icon already includes gloss effects</key>
+				<false/>
+			</dict>
+			<key>Medium</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>Medium</string>
+				</array>
+				<key>Icon already includes gloss effects</key>
+				<false/>
+			</dict>
+			<key>Soft</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>Soft</string>
+				</array>
+				<key>Icon already includes gloss effects</key>
+				<false/>
+			</dict>
 			<key>VerySoft</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -19,37 +46,8 @@
 				<key>Icon already includes gloss effects</key>
 				<false/>
 			</dict>
-            <key>Soft</key>
-            <dict>
-                <key>CFBundleIconFiles</key>
-                <array>
-                    <string>Soft</string>
-                </array>
-                <key>Icon already includes gloss effects</key>
-                <false/>
-            </dict>
-            <key>Medium</key>
-            <dict>
-                <key>CFBundleIconFiles</key>
-                <array>
-                    <string>Medium</string>
-                </array>
-                <key>Icon already includes gloss effects</key>
-                <false/>
-            </dict>
-            <key>Hard</key>
-            <dict>
-                <key>CFBundleIconFiles</key>
-                <array>
-                    <string>Hard</string>
-                </array>
-                <key>Icon already includes gloss effects</key>
-                <false/>
-            </dict>
 		</dict>
 	</dict>
-	
-	
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -61,7 +59,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationSceneManifest</key>
