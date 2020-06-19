@@ -54,30 +54,30 @@ class TextToSpeak {
     }
     
     func speakExtraSoftChosen() -> Void {
-        speak("Extra soft boiled chosen, Put eggs in boiling water now")
+        speak("Extra soft boiled chosen")
     }
     
     func speakSoftChosen() -> Void {
-        speak("soft boiled chosen, Put eggs in boiling water now")
+        speak("soft boiled chosen")
     }
     
     func speakMediumChosen() -> Void {
-        speak("Medium boiled chosen, Put eggs in boiling water now")
+        speak("Medium boiled chosen")
     }
     
     func speakHardChosen() -> Void {
-        speak("Hard boiled chosen, Put eggs in boiling water now")
+        speak("Hard boiled chosen")
     }
     
     func speakEggIsDone() -> Void {
-        speak("Done. Eggs are done. Please put eggs shortly in cold water")
+        speak("Timer finished!. Put eggs in cold water shortly, to prevent further cooking")
     }
     
     private func speak(_ text:String) {
         
         let utterance = AVSpeechUtterance(string: text)
         utterance.voice = AVSpeechSynthesisVoice(language: lang)
-        utterance.pitchMultiplier = 0.75
+        utterance.pitchMultiplier = 1
         synthesizer.speak(utterance)
     }
     

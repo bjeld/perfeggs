@@ -24,9 +24,12 @@ struct RunningView: View {
             Color.white.opacity(self.countdown.finished ? 0.10 : 0)
                 .animation(self.countdown.finished ? Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true) : .default)
             
-            ArcView(show: self.$show, running: self.$countdown.running, themeColor: settingStore.themeColor)
+            if !self.countdown.finished {
+                ArcView(show: self.$show, running: self.$countdown.running, themeColor: settingStore.themeColor)
+            }
+            
            
-            if self.show {
+            if self.show && !self.countdown.finished {
                 RunningIndicatorView(themeColor: settingStore.themeColor, show: self.$show, running: self.$countdown.running)
                     .transition(AnyTransition.scaleAndFade(delay: 0.7))
             }
@@ -72,11 +75,7 @@ struct RunningView: View {
                 .transition(AnyTransition.scaleAndFade(delay: 0.9))
             }
             
-            if self.countdown.finished {
-                Image(getEggImage())
-                    .resizable()
-                    .frame(width: 37, height: 50)
-            }
+         
             
             
         }
@@ -119,7 +118,7 @@ struct RunningView: View {
         case .soft:
             return "finished_soft"
         case .medium:
-            return "finished_menium"
+            return "finished_medium"
         case .hard:
             return "finished_hard"
         }

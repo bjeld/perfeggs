@@ -62,6 +62,8 @@ class Countdown: ObservableObject {
         self.remainingTimeInSeconds = 0
         self.finished = true
         self.running = false
+        
+        TextToSpeak.shared.speakEggIsDone()
     }
     
     // MARK: - Timer / Counter

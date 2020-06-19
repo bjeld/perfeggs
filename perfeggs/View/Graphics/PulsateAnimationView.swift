@@ -19,8 +19,10 @@ struct PulsateAnimationView: View {
             if showPulsate {
                 
                 PulsateMultipleView().onAppear() {
-                    let generator = UINotificationFeedbackGenerator()
-                    generator.notificationOccurred(.success)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                        let generator = UINotificationFeedbackGenerator()
+                        generator.notificationOccurred(.success)
+                    }
                 }
                 
             }

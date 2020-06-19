@@ -13,7 +13,7 @@ struct IdleView: View {
     @EnvironmentObject var viewState:ViewState
     @EnvironmentObject var settingsStore:SettingsStore
     
-    var targetCount = 60
+    var targetCount = 6
     var isTimerRunning = false
     let timer = Timer.publish(every: 0.1, tolerance: 0.1, on: .main, in: .common).autoconnect()
     
@@ -26,6 +26,8 @@ struct IdleView: View {
     
     var body: some View {
         ZStack {
+            
+            
             
             if self.showPulsate {
                 PulsateAnimationView()
@@ -49,6 +51,11 @@ struct IdleView: View {
             GeometryReader { g in
                 EggsViewController(forceValue: self.$forceValue ).frame(width: g.size.width, height: g.size.height / 2)
             }
+            
+            if !self.showPulsate {
+                SettingsTriggerView().transition(.opacity)
+            }
+            
         }
             
         .animation(.default)

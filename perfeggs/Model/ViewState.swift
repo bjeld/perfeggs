@@ -78,7 +78,7 @@ class ViewState: ObservableObject {
             
         }
         
-        return 10 // result
+        return 4 // result
     }
     
     public func getEggBoilLabel() -> String {
