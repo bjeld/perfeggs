@@ -27,10 +27,10 @@ class Countdown: ObservableObject {
     
     // MARK: - Public API
     
-    func setup(eggBoilTimeInSeconds: Int) -> Void {
+    func setup(eggBoilTimeInSeconds: Int, resumeFromRecreated:Bool = false) -> Void {
         self.eggBoilTimeInSeconds = eggBoilTimeInSeconds
         self.finished = false
-        self.running = false
+        self.running = resumeFromRecreated
         print(eggBoilTimeInSeconds)
     }
     
@@ -124,9 +124,10 @@ class Countdown: ObservableObject {
             let diff:Double = Double(futureReference - nowReference)
             if diff > 0 {
                 
-                self.setup(eggBoilTimeInSeconds: eggBoilTimeInSeconds)
+                self.setup(eggBoilTimeInSeconds: eggBoilTimeInSeconds, resumeFromRecreated: true)
                 self.remainingTimeInSeconds = Int(diff)
                 self.progess = 1 - (Double(diff) / Double(eggBoilTimeInSeconds))
+                
             }
             
             UserDefaults.standard.removeObject(forKey: "futureReference")

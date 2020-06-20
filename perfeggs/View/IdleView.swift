@@ -13,7 +13,7 @@ struct IdleView: View {
     @EnvironmentObject var viewState:ViewState
     @EnvironmentObject var settingsStore:SettingsStore
     
-    var targetCount = 6
+    var targetCount = 50
     var isTimerRunning = false
     let timer = Timer.publish(every: 0.1, tolerance: 0.1, on: .main, in: .common).autoconnect()
     

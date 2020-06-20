@@ -42,6 +42,7 @@ struct RunningView: View {
             if self.show && !self.countdown.finished {
                 TitleView(firstText: "Boil time", lastText: self.viewState.getEggBoilLabel(), themeColor: settingStore.themeColor )
                     .offset(x: 0, y: -240)
+                    .transition(AnyTransition.opacity.animation(Animation.easeInOut(duration: 0.5).delay(0.5)))
                    
             }
             
@@ -75,7 +76,13 @@ struct RunningView: View {
                 .transition(AnyTransition.scaleAndFade(delay: 0.9))
             }
             
-         
+            if self.show && !self.countdown.finished && self.countdown.running {
+                Image(getEggImage())
+                   .resizable()
+                   .frame(width: 37, height: 50)
+                   .opacity(0.75)
+                   .transition(AnyTransition.scaleAndFade(delay: 0.4))
+            }
             
             
         }
